@@ -1,6 +1,11 @@
 // CTF - SQL Injection no Login
 // Tecnologias: Node.js, Express, SQLite
 
+
+//A senha padrão para a maioria dos sistemas é admin ou admin123, utilizando 2 tentativas já foi descoberto a senha,
+//sem nem haver a necessidade de acessar esse arquivo, que seria outra forma de explorar a vulnerabilidade já que o repositório é publico.
+//Outra forma de explorar a vulnerabilidade é utilizando o payload ' OR '1'='1 para burlar o login e acessar a flag.
+
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser');
